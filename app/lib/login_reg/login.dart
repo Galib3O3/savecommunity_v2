@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
+import '../app/profile-pages/six_profile_page.dart';
 import '../constants/text.dart';
+import '../pages/splash.dart';
 
 class loginscreen extends StatefulWidget {
   const loginscreen({super.key});
@@ -203,8 +205,9 @@ class _loginscreenState extends State<loginscreen> {
           .signInWithEmailAndPassword(email: email, password: Pass)
           .then((uid) => {
                 Fluttertoast.showToast(msg: "Congrats Login Successfully"),
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const home())),
+                // Navigator.of(context).pushReplacement(
+                //     MaterialPageRoute(builder: (context) => SixProfileView())),
+                Get.to(SixProfileView(), binding: null),
               })
           .catchError((err) {
         Fluttertoast.showToast(msg: err!.message);

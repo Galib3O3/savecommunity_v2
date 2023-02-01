@@ -13,6 +13,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'app/profile-pages/six_profile_page.dart';
 import 'get_data.dart';
 
 Future<void> main() async {

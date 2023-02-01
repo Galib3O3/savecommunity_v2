@@ -91,7 +91,7 @@ class _homeState extends State<home> {
                   onPressed: () {
                     Get.to(get_d());
                   },
-                  child: Text("Sylhet"))
+                  child: Text("Sylhet")),
             ],
           ),
         ),
