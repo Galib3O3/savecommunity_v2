@@ -1,12 +1,19 @@
 class UserFunc {
   String? uid;
   String? email;
+  String? number;
   String? firstName;
   String? lastName;
   String? password;
   String? role;
-  UserFunc(
-      {this.uid, this.email, this.firstName, this.lastName, this.password,this.role});
+  UserFunc({
+    this.uid,
+    this.email,
+    this.firstName,
+    this.lastName,
+    this.password,
+    this.role,
+  });
 //data fetch server
   factory UserFunc.fromMap(map) {
     return UserFunc(
@@ -27,7 +34,7 @@ class UserFunc {
       'firstName': firstName,
       'lastName': lastName,
       'password': password,
-      'role'    : role,
+      'role': role,
     };
   }
 }

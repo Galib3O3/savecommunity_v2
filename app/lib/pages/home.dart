@@ -1,4 +1,5 @@
 import 'package:app/LocationAndVolunterrs/SylhetRegion.dart';
+import 'package:app/app/profile-pages/six_profile_page.dart';
 import 'package:app/function/user_func.dart';
 import 'package:app/pages/homepage.dart';
 import 'package:app/login_reg/login.dart';
@@ -36,7 +37,7 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("HOME"),
+        title: Text("Profile"),
         centerTitle: true,
       ),
       body: Center(
@@ -72,26 +73,16 @@ class _homeState extends State<home> {
               const SizedBox(
                 height: 10,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => data())); //changeable
-                },
-                child: const Text('Information'),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
               ActionChip(
                   label: const Text("Logout"),
                   onPressed: () {
                     logut(context);
                   }),
-              ElevatedButton(
+              ElevatedButton( 
                   onPressed: () {
-                    Get.to(get_d());
+                    Get.to((SixProfileView()));
                   },
-                  child: Text("Sylhet")),
+                  child: Text("HomePage")),
             ],
           ),
         ),

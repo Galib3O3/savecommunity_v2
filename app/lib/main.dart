@@ -1,3 +1,6 @@
+import 'package:app/Dontaion/donation1.dart';
+import 'package:app/about_us/about_us.dart';
+import 'package:app/app/profile-pages/weather-main-page.dart';
 import 'package:app/pages/guest_page.dart';
 import 'package:app/pages/home.dart';
 import 'package:app/pages/homepage.dart';
@@ -13,6 +16,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'Dontaion/donation.dart';
 import 'app/profile-pages/six_profile_page.dart';
 import 'get_data.dart';
 

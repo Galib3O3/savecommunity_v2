@@ -18,7 +18,7 @@ var lat, lon, timeDateSunRise, timeDateSunSet;
 Future<void> getData() async {
   determinePosition();
   Position position = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high);
+      desiredAccuracy: LocationAccuracy.low);
 
   lat = position.latitude;
   lon = position.longitude;

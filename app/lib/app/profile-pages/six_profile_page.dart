@@ -1,4 +1,7 @@
 import 'dart:ui';
+import 'package:app/Dontaion/donation1.dart';
+import 'package:app/LocationAndVolunterrs/SylhetRegion.dart';
+import 'package:app/about_us/about_us.dart';
 import 'package:app/app/profile-pages/weather-main-page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,8 +28,8 @@ class _SixProfileViewState extends State<SixProfileView> {
               },
               icon: Icon(Icons.exit_to_app))
         ],
-        title: Text("Flutter GridView Demo"),
-        backgroundColor: Color.fromARGB(255, 71, 233, 248),
+        title: Center(child: Text("HOME PAGE")),
+        backgroundColor: Colors.blueAccent,
       ),
       body: Center(
           child: Column(
@@ -44,36 +47,29 @@ class _SixProfileViewState extends State<SixProfileView> {
             maxCrossAxisExtent: 200.0,
             children: <Widget>[
               GestureDetector(
-                child: Column(
-                  children: [
-                    Container(
-                      height: 80,
-                      width: 80,
-                      padding: const EdgeInsets.all(8),
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assets/clouds_sun.png"),
-                          fit: BoxFit.cover,
-                          repeat: ImageRepeat.noRepeat,
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: 80,
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage("assets/clouds_sun.png"),
+                            fit: BoxFit.cover,
+                            repeat: ImageRepeat.noRepeat,
+                          ),
                         ),
                       ),
-                    ),
-                    Text(
-                      "weather",
-                      style: TextStyle(fontSize: 18),
-                    )
-                  ],
-                ),
-                onTap: () {
-                  //  getData(lat, lon);
-                  setState(
-                    () {
-                      ///Get.to(secondaryMain());
-                      Get.to(WeatherMainPageView());
-                    },
-                  );
-                },
-              ),
+                      Text(
+                        "weather",
+                        style: TextStyle(fontSize: 18),
+                      )
+                    ],
+                  ),
+                  onTap: () {
+                    //Get.to(() => WeatherMainPageView());
+                  }),
               GestureDetector(
                   child: Column(
                     children: [
@@ -123,7 +119,7 @@ class _SixProfileViewState extends State<SixProfileView> {
                   ),
                   onTap: () {
                     setState(() {
-                      // Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(get_d());
                     });
                   }),
               GestureDetector(
@@ -149,7 +145,7 @@ class _SixProfileViewState extends State<SixProfileView> {
                   ),
                   onTap: () {
                     setState(() {
-                      //// Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(donation1());
                     });
                   }),
               GestureDetector(
@@ -201,7 +197,7 @@ class _SixProfileViewState extends State<SixProfileView> {
                   ),
                   onTap: () {
                     setState(() {
-                      //Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(RowCol_11());
                     });
                   }),
             ],
